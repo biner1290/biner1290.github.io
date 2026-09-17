@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tesla OAuth Callback</title>
+</head>
+<body>
+  <h2>Tesla Authorization Code</h2>
+  <textarea id="code" rows="6" cols="100"></textarea>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("code").value = params.get("code") || "NO CODE";
+  </script>
+</body>
+</html>
